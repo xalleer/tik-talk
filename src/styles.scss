@@ -1,1 +1,39 @@
-/* You can add global styles to this file, and also import other style files */
+@import "mixins";
+
+:root{
+  --primary-color: rgb(174, 122, 255);
+  --primary-hover-color: rgb(133, 100, 198);
+  --primary-soft-color: rgb(237, 228, 253);
+
+  --yellow-primary: rgb(250, 232, 164);
+  --red-primary: rgb(233, 152, 152);
+  --green-primary: rgb(152, 233, 171);
+
+  --yellow-soft: rgb(253, 250, 238);
+  --red-soft: rgb(248, 235, 234);
+  --green-soft: rgb(237, 251, 239);
+
+  --dark-solid: rgb(0, 0, 0);
+  --dark-transparent: rgba(0, 0, 0, 0.8);
+
+  --gray-solid: rgb(95, 100, 109);
+  --gray-soft: rgb(231, 232, 233);
+
+  --light-solid: rgb(255, 255, 255)
+}
+
+body{
+  font-family: "Inter", sans-serif;
+  background: var(--dark-solid);
+}
+
+.btn{
+  background: var(--primary-color);
+  border: 1px solid var(--dark-solid);
+  color: var(--dark-solid);
+  cursor: pointer;
+  width: 100%;
+  padding: 10px 20px;
+  @include font-button;
+  border-radius: 2px;
+}
